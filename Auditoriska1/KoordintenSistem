@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    let x = prompt("Vnesete X koordinata: ");
+    let y = prompt("Vnesete Y koordinata: ");
+    x = parseInt(x);
+    y = parseInt(y);
+    if(!isNaN(x) && !isNaN(y))
+    {
+        if(x>0)
+        {
+            if(y>0)
+            {
+                document.write("Prv kvadrant");
+            }
+            else if(y<0)
+            {
+                document.write("Cetvrt kvadrant");
+            }
+            else{
+                document.write("Pozitiven del na X oska");
+            }
+        }
+        if(x<0)
+        {
+            if(y>0)
+            {
+                document.write("Vtor kvadrant");
+            }
+            else if(y<0)
+            {
+                document.write("Tret kvadrant");
+            }
+            else{
+                document.write("Negtiven del na X oska");
+            }
+        }
+        else{
+            if(y>0)
+            {
+                document.write("Pozitiven del n Y oska");
+            }
+            else if(y<0)
+            {
+                document.write("Negtiven del na Y oska");
+            }
+            else{
+                document.write("Koordinaten pocetok");
+            }
+        }
+    }
+    else{
+        document.write("Vnesete celi broevi!");
+    }
+</script>
+</body>
+</html>
