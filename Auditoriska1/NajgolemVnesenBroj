@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    let x = prompt("Vnesi cel broj: ");
+    x = parseInt(x);
+    let najgolem;
+    najgolem = x;
+    while (!isNaN(x))
+    {
+        if(x>najgolem)
+        {
+            najgolem=x;
+        }
+        x = prompt("Vnesi cel broj: ");
+        x = parseInt(x);
+    }
+    document.write("Najolem broj e "+najgolem);
+</script>
+</body>
+</html>
