@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    let a = prompt("Vnesete go prviot broj: ");
+    let b = prompt("Vnesete go vtoriot broj: ");
+    a = parseInt(a);
+    b = parseInt(b);
+    if(!isNaN(a)&&!isNaN(b))
+    {
+        if(a>b)
+        {
+            document.write(a);
+        }
+        else{
+            document.write(b);
+        }
+    }
+    else{
+        document.write("Vnesete celi broevi!");
+    }
+</script>
+</body>
+</html>
