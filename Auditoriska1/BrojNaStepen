@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    let x = prompt("Vnesete ja osnovata: ");
+    let n = prompt("Vnesete go eksponentot: ");
+    x = parseInt(x);
+    n = parseInt(n);
+    let y;
+    y=x
+    if(!isNaN(x) && !isNaN(n))
+    {
+        for (let i=1;i<n;i++)
+        {
+            x*=y;
+        }
+        document.write(y+"^"+n+"="+x);
+    }
+    else{
+        document.write("Vnesete celi broevi!");
+    }
+</script>
+</body>
+</html>
