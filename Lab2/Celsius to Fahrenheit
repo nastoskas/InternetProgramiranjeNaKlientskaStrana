@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function pretvoriCelsius(p1)
+        {
+            return (p1*9/5)+32;
+        }
+        function pretvoriFahrenheit(t)
+        {
+            return (t-32)*5/9;
+        }
+        let tempC = prompt("Vnesete C");
+        let tempF = window.prompt("Vnesete F");
+        tempC = parseInt(tempC);
+        tempF = parseInt(tempF);
+        document.write(tempC + "C = " + pretvoriCelsius(tempC)+"F  <br>");
+        document.write(tempF + "F = " + pretvoriFahrenheit(tempF)+"C");
+    </script>
+</head>
+<body>
+</body>
+</html>
