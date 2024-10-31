@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function sumCifri(num)
+        {
+            let sum=0;
+            while (num!==0)
+            {
+                sum+=num%10;
+                num=Math.floor(num/10);
+            }
+            return sum;
+        }
+        let niza=[];
+        for (let i=0;i<5;i++)
+        {
+            let input = parseInt(prompt("Vnesi 3 cifren broj"));
+            if(input>=100&&input<=999){
+                niza.push(input);
+            }
+            else{
+                window.prompt("Try again");
+                i--;
+            }
+        }
+        let maxNum = niza[0];
+        let maxSum = sumCifri(niza[0]);
+        for (let i=1;i<5;i++)
+        {
+            let sum = sumCifri(niza[i]);
+            if(sum>maxSum)
+            {
+                maxSum=sum;
+                maxNum=niza[i];
+            }
+        }
+        document.write("Najgolema suma na cifri ima brojot "+maxNum);
+    </script>
+</head>
+<body>
+</body>
+</html>
