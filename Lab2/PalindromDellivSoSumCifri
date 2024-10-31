@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function sumCifri(num)
+        {
+            let sum=0;
+            while (num!==0)
+            {
+                sum+=num%10;
+                num=Math.floor(num/10);
+            }
+            return sum;
+        }
+        let num = prompt("Vnesi tricifren broj");
+        if(!isNaN(parseInt(num))&&num.length===3)
+        {
+            let flag = true;
+            let len = num.length;
+            for (let i=0;i<len;i++)
+            {
+                if(num.charAt(i)!==num.charAt(len-1-i))
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if(flag && (num%sumCifri(num))===0){
+                document.write("Palindrom e, se deli so sumata na cifrite ");
+            }
+            else if(flag){
+                document.write("Palindrom e,no ne se deli so sumata na cifrite ");
+            }
+            else
+            {
+                document.write("Ne e palindrom");
+            }
+        }
+        else{
+            document.write("Nepravilen vlez");
+        }
+
+    </script>
+</head>
+<body>
+</body>
+</html>
